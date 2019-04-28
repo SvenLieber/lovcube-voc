@@ -1,0 +1,31 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "lovc:RestrictionTypeDetector" "lovc:RestrictionTypeExpressionDetector" "lovc:RestrictionTypeDefinitionVersion" "lovc:RestrictionTypeExpressionDetectorVersion" "lovc:RestrictionType" "lovc:RestrictionTypeMeasure" "lovc:RestrictionTypeExpression" "lovc:RestrictionTypeDefinition" "lovc:RestrictionTypeStatistic" ; /*classes style*/
+	"NULL" -> "lovc:RestrictionType" [ label = "rdf:first" ];
+	"NULL" -> "lovc:RestrictionTypeExpressionDetector" [ label = "rdf:first" ];
+	"NULL" -> "ce8c85e:16a65a590fd:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "lovc:RestrictionTypeDefinition" [ label = "rdf:first" ];
+	"NULL" -> "lovc:RestrictionTypeExpression" [ label = "rdf:first" ];
+	"NULL" -> "lovc:RestrictionTypeStatistic" [ label = "rdf:first" ];
+	"NULL" -> "lovc:RestrictionTypeExpressionDetectorVersion" [ label = "rdf:first" ];
+	"NULL" -> "ce8c85e:16a65a590fd:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "ce8c85e:16a65a590fd:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "ce8c85e:16a65a590fd:-7ffc" [ label = "owl:members" ];
+	"NULL" -> "lovc:RestrictionTypeMeasure" [ label = "rdf:first" ];
+	"NULL" -> "ce8c85e:16a65a590fd:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "ce8c85e:16a65a590fd:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "ce8c85e:16a65a590fd:-7ff9" [ label = "rdf:rest" ];
+	"lovc:" -> "https://w3id.org/lovcube/ns/lovcube/v0.2.0" [ label = "owl:versionIRI" ];
+	"lovc:" -> "a6e97c6f90cd2881674186d3c926db10" [ label = "dct:contributor" ];
+	"lovc:" -> "https://w3id.org/lovcube" [ label = "foaf:primaryTopic" ];
+	"lovc:" -> "https://creativecommons.org/publicdomain/zero/1.0/" [ label = "cc:license" ];
+	"lovc:" -> "http://ben.de-meester.org/#me" [ label = "dct:contributor" ];
+	"lovc:" -> "https://w3id.org/lovcube/ns/lovcube/v0.1.0" [ label = "owl:priorVersion" ];
+	"lovc:" -> "https://w3id.org/lovcube" [ label = "rdfs:seeAlso" ];
+	"lovc:" -> "https://sven-lieber.org/profile#me" [ label = "dct:creator" ];
+	"lovc:RestrictionTypeDetector" -> "lovc:RestrictionTypeExpression" [ label = "lovc:detectsRestrictionTypeExpression" ];
+	"lovc:RestrictionType" -> "lovc:RestrictionTypeDefinitionVersion" [ label = "lovc:hasRestrictionTypeDefinition" ];
+
+}

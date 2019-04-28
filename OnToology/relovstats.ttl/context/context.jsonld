@@ -1,0 +1,137 @@
+{
+  "@context" : {
+    "realizationOf" : {
+      "@id" : "http://purl.org/vocab/frbr/core#realizationOf"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "Dataset" : {
+      "@id" : "http://rdfs.org/ns/void#Dataset"
+    },
+    "primaryTopic" : {
+      "@id" : "http://xmlns.com/foaf/0.1/primaryTopic"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion"
+    },
+    "RestrictionTypeExpressionDetectorVersion" : {
+      "@id" : "https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "mbox" : {
+      "@id" : "http://xmlns.com/foaf/0.1/mbox"
+    },
+    "component" : {
+      "@id" : "http://purl.org/linked-data/cube#component"
+    },
+    "measure" : {
+      "@id" : "http://purl.org/linked-data/cube#measure"
+    },
+    "executionTimeDimension" : {
+      "@id" : "https://w3id.org/lovcube/ns/relovstats#executionTimeDimension",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "attribute" : {
+      "@id" : "http://purl.org/linked-data/cube#attribute"
+    },
+    "RestrictionTypeExpressionDetector" : {
+      "@id" : "https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "ComponentSpecification" : {
+      "@id" : "http://purl.org/linked-data/cube#ComponentSpecification"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "detectorVersionDimension" : {
+      "@id" : "https://w3id.org/lovcube/ns/relovstats#detectorVersionDimension",
+      "@type" : "@id"
+    },
+    "DimensionProperty" : {
+      "@id" : "http://purl.org/linked-data/cube#DimensionProperty"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "RestrictionType" : {
+      "@id" : "https://w3id.org/lovcube/ns/lovcube#RestrictionType"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "Vocabulary" : {
+      "@id" : "http://purl.org/vocommons/voaf#Vocabulary"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "Entity" : {
+      "@id" : "http://www.w3.org/ns/prov#Entity"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "ontologyVersionDimension" : {
+      "@id" : "https://w3id.org/lovcube/ns/relovstats#ontologyVersionDimension",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "RestrictionTypeExpression" : {
+      "@id" : "https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression"
+    },
+    "dimension" : {
+      "@id" : "http://purl.org/linked-data/cube#dimension"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "restrictionTypeDimension" : {
+      "@id" : "https://w3id.org/lovcube/ns/relovstats#restrictionTypeDimension",
+      "@type" : "@id"
+    },
+    "DataStructureDefinition" : {
+      "@id" : "http://purl.org/linked-data/cube#DataStructureDefinition"
+    },
+    "Observation" : {
+      "@id" : "http://purl.org/linked-data/cube#Observation"
+    },
+    "Ontology" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Ontology"
+    },
+    "RestrictionTypeMeasure" : {
+      "@id" : "https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure"
+    }
+  }
+}
