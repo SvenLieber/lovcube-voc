@@ -1,0 +1,226 @@
+@prefix : <https://w3id.org/lovcube/ns/lovcube#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/lovcube/ns/lovcube#> .
+
+<https://w3id.org/lovcube/ns/lovcube#> rdf:type owl:Ontology ;
+                                        owl:versionIRI <https://w3id.org/lovcube/ns/lovcube/v0.2.0> ;
+                                        <http://creativecommons.org/ns#license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                        <http://purl.org/dc/terms/contributor> <http://ben.de-meester.org/#me> ,
+                                                                               _:genid1 ;
+                                        <http://purl.org/dc/terms/created> "2018-12-10"^^xsd:date ;
+                                        <http://purl.org/dc/terms/creator> <https://sven-lieber.org/profile#me> ;
+                                        <http://purl.org/dc/terms/description> "The LOVCube vocabulary"@en ;
+                                        <http://purl.org/dc/terms/issued> "2019-04-12"^^xsd:date ;
+                                        <http://purl.org/dc/terms/modified> "2019-04-12"^^xsd:date ;
+                                        <http://purl.org/dc/terms/rights> "Copyright © Ghent University – imec – IDLab"@en ;
+                                        <http://purl.org/dc/terms/title> "LOVCube vocabulary"@en ;
+                                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "lovc" ;
+                                        <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/lovcube/ns/lovcube#" ;
+                                        rdfs:comment """-Version 0.2.0: added expression and human-readable documentation
+-Version 0.1.0: creation."""@en ;
+                                        rdfs:label "LOVCube vocabulary"@en ;
+                                        rdfs:seeAlso <https://w3id.org/lovcube> ;
+                                        owl:priorVersion <https://w3id.org/lovcube/ns/lovcube/v0.1.0> ;
+                                        owl:versionInfo "0.2.0" ;
+                                        <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/lovcube> .
+
+_:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/mbox> "mailto:Anastasia.dimou@UGent.be" ;
+          <http://xmlns.com/foaf/0.1/name> "Anastasia Dimou"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/lovcube/ns/lovcube#detectsRestrictionTypeExpression
+:detectsRestrictionTypeExpression rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :RestrictionTypeDetector ;
+                                  rdfs:range :RestrictionTypeExpression .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#hasRestrictionTypeDefinition
+:hasRestrictionTypeDefinition rdf:type owl:ObjectProperty ;
+                              rdfs:domain :RestrictionType ;
+                              rdfs:range :RestrictionTypeDefinitionVersion .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/linked-data/cube#DataSet
+<http://purl.org/linked-data/cube#DataSet> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#DimensionProperty
+<http://purl.org/linked-data/cube#DimensionProperty> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#MeasureProperty
+<http://purl.org/linked-data/cube#MeasureProperty> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#Observation
+<http://purl.org/linked-data/cube#Observation> rdf:type owl:Class .
+
+
+###  http://purl.org/vocab/frbr/core#Expression
+<http://purl.org/vocab/frbr/core#Expression> rdf:type owl:Class .
+
+
+###  http://purl.org/vocab/frbr/core#Work
+<http://purl.org/vocab/frbr/core#Work> rdf:type owl:Class .
+
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#Dataset
+:Dataset rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/linked-data/cube#DataSet> ,
+                         <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionType
+:RestrictionType rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> ,
+                                 <http://www.w3.org/ns/prov#Entity> ;
+                 rdfs:comment "A certain type of restriction, which can be an axiom or a constraint. One example is the restriction type 'disjoint classes'."@en ;
+                 rdfs:label "Restriction Type"@en ,
+                            "" .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinition
+:RestrictionTypeDefinition rdf:type owl:Class ;
+                           rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> ,
+                                           <http://www.w3.org/ns/prov#Entity> ;
+                           rdfs:label "Restriction Type Definition"@en .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinitionVersion
+:RestrictionTypeDefinitionVersion rdf:type owl:Class ;
+                                  rdfs:label "Restriction Type Definition Version"@en .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDetector
+:RestrictionTypeDetector rdf:type owl:Class ;
+                         rdfs:label "Restriction Type Detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression
+:RestrictionTypeExpression rdf:type owl:Class ;
+                           rdfs:subClassOf <http://purl.org/linked-data/cube#DimensionProperty> ,
+                                           <http://purl.org/vocab/frbr/core#Expression> ,
+                                           <http://www.w3.org/ns/prov#Entity> ;
+                           rdfs:comment "One possible expression of a restriction type. One example might be the expression 'owl:disjointWith' for the restriction type 'disjoint classes'."@en ;
+                           rdfs:label "Restriction Type Expression"@en .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector
+:RestrictionTypeExpressionDetector rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> ,
+                                                   <http://www.w3.org/ns/prov#Entity> ;
+                                   rdfs:comment "A piece of software which is able to detect a certain restriction type expression."@en ;
+                                   rdfs:label "Restriction Type Expression Detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion
+:RestrictionTypeExpressionDetectorVersion rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.org/linked-data/cube#MeasureProperty> ,
+                                                          <http://purl.org/vocab/frbr/core#Expression> ,
+                                                          <http://www.w3.org/ns/prov#Entity> ;
+                                          rdfs:comment "A concrete version of a restriction type expression detector."@en ;
+                                          rdfs:label "Restriction Type Expression Detector Version"@en .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure
+:RestrictionTypeMeasure rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.org/linked-data/cube#MeasureProperty> ,
+                                        <http://www.w3.org/ns/prov#Entity> ;
+                        rdfs:label "Restriction Type Measure"@en .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeStatistic
+:RestrictionTypeStatistic rdf:type owl:Class ;
+                          rdfs:subClassOf <http://purl.org/linked-data/cube#Observation> ,
+                                          <http://www.w3.org/ns/prov#Entity> ;
+                          rdfs:label "Restriction Type Statistic"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://ben.de-meester.org/#me
+<https://ben.de-meester.org/#me> rdf:type owl:NamedIndividual ,
+                                          <http://xmlns.com/foaf/0.1/Person> ;
+                                 <http://xmlns.com/foaf/0.1/mbox> "mailto:ben.demeester@ugent.be" ;
+                                 <http://xmlns.com/foaf/0.1/name> "Ben De Meester"@en .
+
+
+###  https://sven-lieber.org/profile#me
+<https://sven-lieber.org/profile#me> rdf:type owl:NamedIndividual ,
+                                              <http://xmlns.com/foaf/0.1/Person> ;
+                                     <http://xmlns.com/foaf/0.1/mbox> "mailto:sven.lieber@ugent.be" ;
+                                     <http://xmlns.com/foaf/0.1/name> "Sven Lieber"@en .
+
+
+###  https://w3id.org/lovcube/ns/lovcube
+<https://w3id.org/lovcube/ns/lovcube> rdf:type owl:NamedIndividual ,
+                                               <http://purl.org/vocommons/voaf#Vocabulary> .
+
+
+_:genid2 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+         <http://xmlns.com/foaf/0.1/mbox> "mailto:Anastasia.dimou@UGent.be" ;
+         <http://xmlns.com/foaf/0.1/name> "Anastasia Dimou"@en .
+
+_:genid3 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/mbox> "mailto:Anastasia.dimou@UGent.be" ;
+          <http://xmlns.com/foaf/0.1/name> "Anastasia Dimou"@en .
+
+_:genid4 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/mbox> "mailto:Anastasia.dimou@UGent.be" ;
+          <http://xmlns.com/foaf/0.1/name> "Anastasia Dimou"@en .
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+   owl:members ( :RestrictionType
+                 :RestrictionTypeDefinition
+                 :RestrictionTypeExpression
+                 :RestrictionTypeExpressionDetector
+                 :RestrictionTypeExpressionDetectorVersion
+                 :RestrictionTypeMeasure
+                 :RestrictionTypeStatistic
+               )
+ ] .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

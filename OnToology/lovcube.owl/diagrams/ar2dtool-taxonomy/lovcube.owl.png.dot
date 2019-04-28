@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "lovc:RestrictionTypeExpressionDetector" "qb:DataSet" "frbr:Expression" "qb:MeasureProperty" "lovc:RestrictionTypeExpressionDetectorVersion" "lovc:RestrictionType" "lovc:Dataset" "prov:Entity" "lovc:RestrictionTypeMeasure" "lovc:RestrictionTypeExpression" "frbr:Work" "lovc:RestrictionTypeDefinition" "qb:Observation" "lovc:RestrictionTypeStatistic" "qb:DimensionProperty" ; /*classes style*/
+	"lovc:RestrictionType" -> "prov:Entity" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionType" -> "frbr:Work" [ label = "rdfs:subClassOf" ];
+	"lovc:Dataset" -> "prov:Entity" [ label = "rdfs:subClassOf" ];
+	"lovc:Dataset" -> "qb:DataSet" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeExpression" -> "prov:Entity" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeExpression" -> "frbr:Expression" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeExpression" -> "qb:DimensionProperty" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeDefinition" -> "prov:Entity" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeDefinition" -> "frbr:Work" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeExpressionDetectorVersion" -> "prov:Entity" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeExpressionDetectorVersion" -> "frbr:Expression" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeExpressionDetectorVersion" -> "qb:MeasureProperty" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeMeasure" -> "prov:Entity" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeMeasure" -> "qb:MeasureProperty" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeExpressionDetector" -> "prov:Entity" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeExpressionDetector" -> "frbr:Work" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeStatistic" -> "prov:Entity" [ label = "rdfs:subClassOf" ];
+	"lovc:RestrictionTypeStatistic" -> "qb:Observation" [ label = "rdfs:subClassOf" ];
+
+}

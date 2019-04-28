@@ -1,0 +1,1158 @@
+@prefix : <https://w3id.org/lovcube/ns/relovstats#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/lovcube/ns/relovstats#> .
+
+<https://w3id.org/lovcube/ns/relovstats#> rdf:type owl:Ontology ;
+                                           owl:versionIRI <https://w3id.org/lovcube/ns/relovstats/v0.2.0> ;
+                                           <http://creativecommons.org/ns#license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                           <http://purl.org/dc/terms/contributor> <http://ben.de-meester.org/#me> ,
+                                                                                  _:genid1 ;
+                                           <http://purl.org/dc/terms/created> "2018-12-10"^^xsd:date ;
+                                           <http://purl.org/dc/terms/creator> <https://sven-lieber.org/profile#me> ;
+                                           <http://purl.org/dc/terms/description> "ReLOVStats restriction types, described using the LOVCube vocabulary"@en ;
+                                           <http://purl.org/dc/terms/issued> "2019-04-12"^^xsd:date ;
+                                           <http://purl.org/dc/terms/modified> "2019-04-12"^^xsd:date ;
+                                           <http://purl.org/dc/terms/rights> "Copyright © Ghent University – imec – IDLab"@en ;
+                                           <http://purl.org/dc/terms/title> "ReLOVStats restriction types"@en ;
+                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "rls" ;
+                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/lovcube/ns/relovstats#" ;
+                                           rdfs:comment """-Version 0.2.0: fixed syntax errors and removed obsolete restriction type definitions
+-Version 0.1.0: creation."""@en ;
+                                           rdfs:label "ReLOVStats restriction types"@en ;
+                                           rdfs:seeAlso <https://w3id.org/lovcube> ;
+                                           owl:priorVersion <https://w3id.org/lovcube/ns/relovstats/v0.1.0> ;
+                                           owl:versionInfo "0.2.0" ;
+                                           <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/lovcube> .
+
+_:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/mbox> "mailto:Anastasia.dimou@UGent.be" ;
+          <http://xmlns.com/foaf/0.1/name> "Anastasia Dimou"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/linked-data/cube#attribute
+<http://purl.org/linked-data/cube#attribute> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#component
+<http://purl.org/linked-data/cube#component> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#dimension
+<http://purl.org/linked-data/cube#dimension> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/cube#measure
+<http://purl.org/linked-data/cube#measure> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/frbr/core#realizationOf
+<http://purl.org/vocab/frbr/core#realizationOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/lovcube/ns/relovstats#detectorVersionDimension
+:detectorVersionDimension rdf:type owl:ObjectProperty ;
+                          rdfs:domain <http://purl.org/linked-data/cube#Observation> ;
+                          rdfs:range <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#ontologyVersionDimension
+:ontologyVersionDimension rdf:type owl:ObjectProperty ;
+                          rdfs:domain <http://purl.org/linked-data/cube#Observation> ;
+                          rdfs:range owl:Ontology .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#restrictionTypeDimension
+:restrictionTypeDimension rdf:type owl:ObjectProperty ;
+                          rdfs:domain <http://purl.org/linked-data/cube#Observation> ;
+                          rdfs:range <https://w3id.org/lovcube/ns/lovcube#RestrictionType> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/lovcube/ns/relovstats#executionTimeDimension
+:executionTimeDimension rdf:type owl:DatatypeProperty ;
+                        rdfs:domain <http://purl.org/linked-data/cube#Observation> ;
+                        rdfs:range xsd:dateTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/linked-data/cube#ComponentSpecification
+<http://purl.org/linked-data/cube#ComponentSpecification> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#DataStructureDefinition
+<http://purl.org/linked-data/cube#DataStructureDefinition> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#DimensionProperty
+<http://purl.org/linked-data/cube#DimensionProperty> rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/cube#Observation
+<http://purl.org/linked-data/cube#Observation> rdf:type owl:Class .
+
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
+
+
+###  http://rdfs.org/ns/void#Dataset
+<http://rdfs.org/ns/void#Dataset> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2002/07/owl#Ontology
+owl:Ontology rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionType
+<https://w3id.org/lovcube/ns/lovcube#RestrictionType> rdf:type owl:Class .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression
+<https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> rdf:type owl:Class .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector
+<https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> rdf:type owl:Class .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion
+<https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> rdf:type owl:Class .
+
+
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure
+<https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://ben.de-meester.org/#me
+<https://ben.de-meester.org/#me> rdf:type owl:NamedIndividual ,
+                                          <http://xmlns.com/foaf/0.1/Person> ;
+                                 <http://xmlns.com/foaf/0.1/mbox> "mailto:ben.demeester@ugent.be" ;
+                                 <http://xmlns.com/foaf/0.1/name> "Ben De Meester"@en .
+
+
+###  https://sven-lieber.org/profile#me
+<https://sven-lieber.org/profile#me> rdf:type owl:NamedIndividual ,
+                                              <http://xmlns.com/foaf/0.1/Person> ;
+                                     <http://xmlns.com/foaf/0.1/mbox> "mailto:sven.lieber@ugent.be" ;
+                                     <http://xmlns.com/foaf/0.1/name> "Sven Lieber"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#
+<https://w3id.org/lovcube/ns/relovstats#> rdf:type owl:NamedIndividual ,
+                                                   <http://purl.org/vocommons/voaf#Vocabulary> ,
+                                                   <http://rdfs.org/ns/void#Dataset> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#asymmetricProperties
+:asymmetricProperties rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                      rdfs:comment ""@en ;
+                      rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                      rdfs:label "Asymmetric properties restriction type"@en ;
+                      rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#asymmetricPropertiesDetectorOwlAsymmetricProperty
+:asymmetricPropertiesDetectorOwlAsymmetricProperty rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                   rdfs:comment "A method or software component to detect owl:AsymmetricProperty restrictions."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                   rdfs:label "owl:AsymmetricProperty detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#asymmetricPropertiesLODStatsDetectorOwlAsymmetricProperty-v1
+:asymmetricPropertiesLODStatsDetectorOwlAsymmetricProperty-v1 rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                              <http://purl.org/vocab/frbr/core#realizationOf> :asymmetricPropertiesDetectorOwlAsymmetricProperty ;
+                                                              rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                              rdfs:label "owl:AsymmetricProperty detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#asymmetricPropertiesOwlAsymmetricProperty
+:asymmetricPropertiesOwlAsymmetricProperty rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                           <http://purl.org/vocab/frbr/core#realizationOf> :asymmetricProperties ;
+                                           rdfs:comment "An asymmetric properties restriction, expressed using the owl:asymmetricProperty property."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                           rdfs:label "owl:asymmetricProperty restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#averageHierarchyDepth
+:averageHierarchyDepth rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure> ;
+                       rdfs:comment "The average hierarchy depth of disjoint hierarchies of IRIs."@en ;
+                       rdfs:label "Average hierarchy depth" .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#detectorVersionDimension
+:detectorVersionDimension rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointClasses
+:disjointClasses rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                 rdfs:comment ""@en ;
+                 rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                 rdfs:label "Disjoint classes restriction type"@en ;
+                 rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointClassesDetectorOwlAllDisjointClasses
+:disjointClassesDetectorOwlAllDisjointClasses rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                              rdfs:comment "A method or software component to detect owl:AllDisjointClasses restrictions."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                              rdfs:label "owl:AllDisjointClasses detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointClassesDetectorOwlDisjointWith
+:disjointClassesDetectorOwlDisjointWith rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                        rdfs:comment "A method or software component to detect owl:disjointWith restrictions."@en ;
+                                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                        rdfs:label "owl:disjointWith detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointClassesLODStatsDetectorOwlAllDisjointClasses-v1
+:disjointClassesLODStatsDetectorOwlAllDisjointClasses-v1 rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                         <http://purl.org/vocab/frbr/core#realizationOf> :disjoinClassesDetectorOwlAllDisjointClasses ;
+                                                         rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                         rdfs:label "owl:AllDisjointClasses detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointClassesLODStatsDetectorOwlDisjointWith-v1
+:disjointClassesLODStatsDetectorOwlDisjointWith-v1 rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                   <http://purl.org/vocab/frbr/core#realizationOf> :disjointClassesDetectorOwlDisjointWith ;
+                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                   rdfs:label "owl:disjointWith detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointClassesOwlAllDisjointClasses
+:disjointClassesOwlAllDisjointClasses rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                      <http://purl.org/vocab/frbr/core#realizationOf> :disjointClasses ;
+                                      rdfs:comment "A disjoint classes restriction, expressed using the owl:AllDisjointClasses class."@en ;
+                                      rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                      rdfs:label "owl:AllDisjointClasses restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointClassesOwlDisjointWith
+:disjointClassesOwlDisjointWith rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                <http://purl.org/vocab/frbr/core#realizationOf> :disjointClasses ;
+                                rdfs:comment "A disjoint classes restriction, expressed using the owl:disjointWith property."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                rdfs:label "owl:disjointWith restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointProperties
+:disjointProperties rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                    rdfs:comment ""@en ;
+                    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                    rdfs:label "Disjoint properties restriction type"@en ;
+                    rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointPropertiesDetectorOwlAllDisjointProperties
+:disjointPropertiesDetectorOwlAllDisjointProperties rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                    rdfs:comment "A method or software component to detect owl:AllDisjointProperties restrictions."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                    rdfs:label "owl:AllDisjointProperties detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointPropertiesDetectorOwlDisjointWith
+:disjointPropertiesDetectorOwlDisjointWith rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                           rdfs:comment "A method or software component to detect owl:propertyDisjointWith restrictions."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                           rdfs:label "owl:propertyDisjointWith detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointPropertiesLODStatsDetectorOwlAllDisjointProperties-v1
+:disjointPropertiesLODStatsDetectorOwlAllDisjointProperties-v1 rdf:type owl:NamedIndividual ,
+                                                                        <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                               <http://purl.org/vocab/frbr/core#realizationOf> :disjointPropertiesDetectorOwlAllDisjointProperties ;
+                                                               rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                               rdfs:label "owl:AllDisjointProperties detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointPropertiesLODStatsDetectorOwlDisjointWith-v1
+:disjointPropertiesLODStatsDetectorOwlDisjointWith-v1 rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                      <http://purl.org/vocab/frbr/core#realizationOf> :disjointPropertiesDetectorOwlDisjointWith ;
+                                                      rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                      rdfs:label "owl:propertyDisjointWith detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointPropertiesOwlAllDisjointProperties
+:disjointPropertiesOwlAllDisjointProperties rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                            <http://purl.org/vocab/frbr/core#realizationOf> :disjointProperties ;
+                                            rdfs:comment "A disjoint properties restriction, expressed using the owl:AllDisjointProperties class."@en ;
+                                            rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                            rdfs:label "owl:AllDisjointProperties restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#disjointPropertiesOwlDisjointWith
+:disjointPropertiesOwlDisjointWith rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                   <http://purl.org/vocab/frbr/core#realizationOf> :disjointProperties ;
+                                   rdfs:comment "A disjoint properties restriction, expressed using the owl:propertyDisjointWith property."@en ;
+                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                   rdfs:label "owl:propertyDisjointWith restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactQualifiedCardinality
+:exactQualifiedCardinality rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                           rdfs:comment ""@en ;
+                           rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                           rdfs:label "Exact qualified cardinality restriction type"@en ;
+                           rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactQualifiedCardinalityDetectorOwlCardinality
+:exactQualifiedCardinalityDetectorOwlCardinality rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                 rdfs:comment "A method or software component to detect owl:qualifiedCardinality restrictions."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                 rdfs:label "owl:qualifiedCardinality detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactQualifiedCardinalityLODStatsDetectorOwlCardinality-v1
+:exactQualifiedCardinalityLODStatsDetectorOwlCardinality-v1 rdf:type owl:NamedIndividual ,
+                                                                     <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                            <http://purl.org/vocab/frbr/core#realizationOf> :exactQualifiedCardinalityDetectorOwlCardinality ;
+                                                            rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                            rdfs:label "owl:qualifiedCardinality detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactUnqualifiedCardinality
+:exactUnqualifiedCardinality rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                             rdfs:comment ""@en ;
+                             rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                             rdfs:label "Exact unqualified cardinality restriction type"@en ;
+                             rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactUnqualifiedCardinalityDetectorOwlCardinality
+:exactUnqualifiedCardinalityDetectorOwlCardinality rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                   rdfs:comment "A method or software component to detect owl:cardinality restrictions."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                   rdfs:label "owl:cardinality detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactUnqualifiedCardinalityDetectorOwlMinMax
+:exactUnqualifiedCardinalityDetectorOwlMinMax rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                              rdfs:comment "A method or software component to detect owl:minCardinality==owl:maxCardinality restrictions."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                              rdfs:label "owl:minCardinality==owl:maxCardinality detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactUnqualifiedCardinalityLODStatsDetectorOwlCardinality-v1
+:exactUnqualifiedCardinalityLODStatsDetectorOwlCardinality-v1 rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                              <http://purl.org/vocab/frbr/core#realizationOf> :exactUnqualifiedCardinalityDetectorOwlCardinality ;
+                                                              rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                              rdfs:label "owl:cardinality detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactUnqualifiedCardinalityLODStatsDetectorOwlMinMax-v1
+:exactUnqualifiedCardinalityLODStatsDetectorOwlMinMax-v1 rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                         <http://purl.org/vocab/frbr/core#realizationOf> :exactUnqualifiedCardinalityDetectorOwlMinMax ;
+                                                         rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                         rdfs:label "owl:minCardinality==owl:maxCardinality detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactUnqualifiedCardinalityOwlCardinality
+:exactUnqualifiedCardinalityOwlCardinality rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                           <http://purl.org/vocab/frbr/core#realizationOf> :exactUnqualifiedCardinality ;
+                                           rdfs:comment "An exact unqualified cardinality restriction, expressed using the owl:cardinality property."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                           rdfs:label "owl:cardinality restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#exactUnqualifiedCardinalityOwlMinMax
+:exactUnqualifiedCardinalityOwlMinMax rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                      <http://purl.org/vocab/frbr/core#realizationOf> :exactUnqualifiedCardinality ;
+                                      rdfs:comment "An exact qualified cardinality restriction, expressed using the properties owl:minCardinality and owl:maxCardinality with the same values."@en ;
+                                      rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                      rdfs:label "owl:minCardinality==owl:maxCardinality"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#executionTimeDimension
+:executionTimeDimension rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#functionalProperties
+:functionalProperties rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                      rdfs:comment ""@en ;
+                      rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                      rdfs:label "Functional properties restriction type"@en ;
+                      rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#functionalPropertiesDetectorOwlFunctionalProperty
+:functionalPropertiesDetectorOwlFunctionalProperty rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                   rdfs:comment "A method or software component to detect owl:FunctionalProperties restrictions."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                   rdfs:label "owl:FunctionalProperty detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#functionalPropertiesLODStatsDetectorOwlFunctionalProperty-v1
+:functionalPropertiesLODStatsDetectorOwlFunctionalProperty-v1 rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                              <http://purl.org/vocab/frbr/core#realizationOf> :functionalPropertiesDetectorOwlFunctionalProperty ;
+                                                              rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                              rdfs:label "owl:FunctionalProperty detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#functionalPropertiesOwlFunctionalProperty
+:functionalPropertiesOwlFunctionalProperty rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                           <http://purl.org/vocab/frbr/core#realizationOf> :functionalProperty ;
+                                           rdfs:comment "A functional properties restriction, expressed using the owl:FunctionalProperty property."@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                           rdfs:label "owl:FunctionalProperty"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#hierarchyAmountDistribution
+:hierarchyAmountDistribution rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/linked-data/cube#DataStructureDefinition> ,
+                                      <http://www.w3.org/ns/prov#Entity> ;
+                             <http://purl.org/linked-data/cube#component> _:genid2 ,
+                                                                          _:genid3 ,
+                                                                          _:genid4 ,
+                                                                          _:genid5 ,
+                                                                          _:genid6 ,
+                                                                          _:genid7 ,
+                                                                          _:genid8 ;
+                             rdfs:comment "This data structure contains the measurement of the amount of hierarchies."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                             rdfs:label "Amount of hierarchies"@en .
+
+_:genid2 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+          <http://purl.org/linked-data/cube#dimension> :implementationDimension .
+
+_:genid3 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+          <http://purl.org/linked-data/cube#dimension> :restrictionTypeDimension .
+
+_:genid4 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+          <http://purl.org/linked-data/cube#dimension> :detectorVersionDimension .
+
+_:genid5 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+          <http://purl.org/linked-data/cube#dimension> :executionTimeDimension .
+
+_:genid6 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+          <http://purl.org/linked-data/cube#dimension> :ontologyVersionDimension .
+
+_:genid7 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+          <http://purl.org/linked-data/cube#measure> :hierarchyOccurrence .
+
+_:genid8 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+          <http://purl.org/linked-data/cube#attribute> <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#hierarchyOccurrence
+:hierarchyOccurrence rdf:type owl:NamedIndividual ,
+                              <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure> ;
+                     rdfs:comment "The occurrence of disjoint hierarchies of IRIs."@en ;
+                     rdfs:label "Hierarchy amount"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#inverseFunctionalProperties
+:inverseFunctionalProperties rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                             rdfs:comment ""@en ;
+                             rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                             rdfs:label "Inverse functional properties restriction type"@en ;
+                             rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty
+:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty rdf:type owl:NamedIndividual ,
+                                                                          <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                                 rdfs:comment "A method or software component to detect owl:InverseProperty restrictions."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                                 rdfs:label "owl:InverseFunctionalProperty detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#inverseFunctionalPropertiesLODStatsDetectorOwlInverseFunctionalProperty-v1
+:inverseFunctionalPropertiesLODStatsDetectorOwlInverseFunctionalProperty-v1 rdf:type owl:NamedIndividual ,
+                                                                                     <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                                            <http://purl.org/vocab/frbr/core#realizationOf> :inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty ;
+                                                                            rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                                            rdfs:label "owl:InverseFunctionalProperty detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#inverseFunctionalPropertiesOwlInverseFunctionalProperty
+:inverseFunctionalPropertiesOwlInverseFunctionalProperty rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                                         <http://purl.org/vocab/frbr/core#realizationOf> :inverseFunctionalProperty ;
+                                                         rdfs:comment "An inverse functional properties restriction, expressed using the owl:InverseFunctionalProperty property."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                         rdfs:label "owl:InverseFunctionalProperty"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#irreflexiveProperties
+:irreflexiveProperties rdf:type owl:NamedIndividual ,
+                                <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                       rdfs:comment ""@en ;
+                       rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                       rdfs:label "Irreflexive properties restriction type"@en ;
+                       rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#irreflexivePropertiesDetectorOwlIrreflexiveProperty
+:irreflexivePropertiesDetectorOwlIrreflexiveProperty rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                     rdfs:comment "A method or software component to detect owl:IrreflexiveProperty restrictions."@en ;
+                                                     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                     rdfs:label "owl:IrreflexiveProperty detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#irreflexivePropertiesLODStatsDetectorOwlIrreflexiveProperty-v1
+:irreflexivePropertiesLODStatsDetectorOwlIrreflexiveProperty-v1 rdf:type owl:NamedIndividual ,
+                                                                         <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                                <http://purl.org/vocab/frbr/core#realizationOf> :irreflexivePropertiesDetectorOwlIrreflexiveProperty ;
+                                                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                                rdfs:label "owl:IrreflexiveProperty detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#irreflexivePropertiesOwlIrreflexiveProperty
+:irreflexivePropertiesOwlIrreflexiveProperty rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                             <http://purl.org/vocab/frbr/core#realizationOf> :irreflexiveProperties ;
+                                             rdfs:comment "An irreflexive properties restriction, expressed using the owl:irreflexiveProperty property."@en ;
+                                             rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                             rdfs:label "owl:irreflexiveProperty restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#literalPatternMatching
+:literalPatternMatching rdf:type owl:NamedIndividual ,
+                                 <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                        rdfs:comment ""@en ;
+                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                        rdfs:label "Literal pattern matching restriction type"@en ;
+                        rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#literalPatternMatchingDetectorXsdPatternOwlRestriction
+:literalPatternMatchingDetectorXsdPatternOwlRestriction rdf:type owl:NamedIndividual ,
+                                                                 <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                        rdfs:comment "A method or software component to detect owl:withRestrictions, xsd:pattern restrictions."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                        rdfs:label "owl:withRestrictions, xsd:pattern detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#literalPatternMatchingLODStatsDetectorXsdPatternOwlRestriction-v1
+:literalPatternMatchingLODStatsDetectorXsdPatternOwlRestriction-v1 rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                                   <http://purl.org/vocab/frbr/core#realizationOf> :literalPatternMatchingDetectorXsdPatternOwlRestriction ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                                   rdfs:label "owl:withRestrictions, xsd:pattern detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#literalPatternMatchingXsdPatternOwlRestriction
+:literalPatternMatchingXsdPatternOwlRestriction rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                                <http://purl.org/vocab/frbr/core#realizationOf> :literalPatternMatching ;
+                                                rdfs:comment "A literal pattern matching restriction, expressed using the owl:withRestrictions property and a defined xsd:pattern."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                rdfs:label "owl:withRestrictions on xsd:pattern restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#literalRanges
+:literalRanges rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+               rdfs:comment ""@en ;
+               rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+               rdfs:label "Literal ranges restriction type"@en ;
+               rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#literalRangesDetectorXsdMinMaxOwlRestriction
+:literalRangesDetectorXsdMinMaxOwlRestriction rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ,
+                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                              <http://purl.org/vocab/frbr/core#realizationOf> :literalRangesDetectorXsdMinMaxOwlRestriction ;
+                                              rdfs:comment "A method or software component to detect owl:withRestrictions, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                              rdfs:label "owl:withRestriction, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive detector"@en ,
+                                                         "owl:withRestriction, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive detector v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#literalRangesXsdMinMaxOwlRestriction
+:literalRangesXsdMinMaxOwlRestriction rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                      <http://purl.org/vocab/frbr/core#realizationOf> :literalRanges ;
+                                      rdfs:comment "A literal ranges restriction, expressed using the owl:withRestriction property and a defined xsd:minInclusive xsd:minExclusive or xsd:maxInclusive or xsd:maxExclusive"@en ;
+                                      rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                      rdfs:label "owl:withRestriction on xsd:minInclusive xsd:minExclusive xsd:maxInclusive xsd:maxExclusive"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maxHierarchyDepth
+:maxHierarchyDepth rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure> ;
+                   rdfs:comment "The biggest hierarchy depth of disjoint hierarcheis of IRIs."@en ;
+                   rdfs:label "Maximum hierarchy depth"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maxHierarchyDepthsDistribution
+:maxHierarchyDepthsDistribution rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/linked-data/cube#DataStructureDefinition> ;
+                                <http://purl.org/linked-data/cube#component> _:genid9 ,
+                                                                             _:genid10 ,
+                                                                             _:genid11 ,
+                                                                             _:genid12 ,
+                                                                             _:genid13 ,
+                                                                             _:genid14 ,
+                                                                             _:genid15 ;
+                                rdfs:comment "This data structure contains maximum hieararchy depth measurements."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                rdfs:label "Maximum hierarchy depth distribution"@en .
+
+_:genid9 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+          <http://purl.org/linked-data/cube#dimension> :implementationDimension .
+
+_:genid10 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :restrictionTypeDimension .
+
+_:genid11 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :detectorVersionDimension .
+
+_:genid12 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :executionTimeDimension .
+
+_:genid13 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :ontologyVersionDimension .
+
+_:genid14 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#measure> :maxHierarchyDepth .
+
+_:genid15 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#attribute> <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maximumQualifiedCardinality
+:maximumQualifiedCardinality rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                             rdfs:comment ""@en ;
+                             rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                             rdfs:label "Maximum qualified cardinality restriction type"@en ;
+                             rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maximumQualifiedCardinalityDetectorOwl
+:maximumQualifiedCardinalityDetectorOwl rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                        rdfs:comment "A method or software component to detect owl:maxQualifiedCardinality restrictions."@en ;
+                                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                        rdfs:label "owl:maxQualifiedCardinality detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maximumQualifiedCardinalityLODStatsDetectorOwl-v1
+:maximumQualifiedCardinalityLODStatsDetectorOwl-v1 rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                   <http://purl.org/vocab/frbr/core#realizationOf> :maximumQualifiedCardinalityDetectorOwl ;
+                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                   rdfs:label "owl:maxQualifiedCardinality detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maximumQualifiedCardinalityOwl
+:maximumQualifiedCardinalityOwl rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                <http://purl.org/vocab/frbr/core#realizationOf> :maximumQualifiedCardinality ;
+                                rdfs:comment "A maximum qualified cardinality restriction, expressed using the owl:maxQualifiedCardinality property."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                rdfs:label "owl:maxQualifiedCardinality restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maximumUnqualifiedCardinality
+:maximumUnqualifiedCardinality rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                               rdfs:comment ""@en ;
+                               rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                               rdfs:label "Maximum unqualified cardinality restriction type"@en ;
+                               rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maximumUnqualifiedCardinalityDetectorOwlMaxCardinality
+:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality rdf:type owl:NamedIndividual ,
+                                                                 <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                        rdfs:comment "A method or software component to detect owl:maxCardinality restrictions."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                        rdfs:label "owl:maxCardinality detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maximumUnqualifiedCardinalityLODStatsDetectorOwlMaxCardinality-v1
+:maximumUnqualifiedCardinalityLODStatsDetectorOwlMaxCardinality-v1 rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                                   <http://purl.org/vocab/frbr/core#realizationOf> :maximumUnqualifiedCardinalityDetectorOwlMaxCardinality ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                                   rdfs:label "owl:maxCardinality detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#maximumUnqualifiedCardinalityOwlMaxCardinality
+:maximumUnqualifiedCardinalityOwlMaxCardinality rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                                rdfs:comment "A maximum unqualified cardinality restriction, expressed using the owl:maxCardinality property."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                rdfs:label "owl:maxCardinality restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#meanHierarchyDepthsDistribution
+:meanHierarchyDepthsDistribution rdf:type owl:NamedIndividual ,
+                                          <http://purl.org/linked-data/cube#DataStructureDefinition> ;
+                                 <http://purl.org/linked-data/cube#component> _:genid16 ,
+                                                                              _:genid17 ,
+                                                                              _:genid18 ,
+                                                                              _:genid19 ,
+                                                                              _:genid20 ,
+                                                                              _:genid21 ,
+                                                                              _:genid22 ;
+                                 rdfs:comment "This data structure contains average hieararchy depth measurements."@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                 rdfs:label "Average hierarchy depth distribution"@en .
+
+_:genid16 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :implementationDimension .
+
+_:genid17 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :restrictionTypeDimension .
+
+_:genid18 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :detectorVersionDimension .
+
+_:genid19 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :executionTimeDimension .
+
+_:genid20 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :ontologyVersionDimension .
+
+_:genid21 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#measure> :averageHierarchyDepth .
+
+_:genid22 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#attribute> <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#medianHierarchyDepth
+:medianHierarchyDepth rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure> ;
+                      rdfs:comment "The median hierarchy depth of disjoint hierarchies of IRIs."@en ;
+                      rdfs:label "Median hierarchy depth"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#medianHierarchyDepthsDistribution
+:medianHierarchyDepthsDistribution rdf:type owl:NamedIndividual ,
+                                            <http://purl.org/linked-data/cube#DataStructureDefinition> ;
+                                   <http://purl.org/linked-data/cube#component> _:genid23 ,
+                                                                                _:genid24 ,
+                                                                                _:genid25 ,
+                                                                                _:genid26 ,
+                                                                                _:genid27 ,
+                                                                                _:genid28 ,
+                                                                                _:genid29 ;
+                                   rdfs:comment "This data structure contains median hieararchy depth measurements."@en ;
+                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                   rdfs:label "Median hierarchy depth distribution"@en .
+
+_:genid23 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :implementationDimension .
+
+_:genid24 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :restrictionTypeDimension .
+
+_:genid25 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :detectorVersionDimension .
+
+_:genid26 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :executionTimeDimension .
+
+_:genid27 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :ontologyVersionDimension .
+
+_:genid28 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#measure> :medianHierarchyDepth .
+
+_:genid29 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#attribute> <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minHierarchyDepth
+:minHierarchyDepth rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure> ;
+                   rdfs:comment "The smallest hierarchy depth of disjoint hierarchies of IRIs."@en ;
+                   rdfs:label "Minimum hierarchy depth"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minHierarchyDepthsDistribution
+:minHierarchyDepthsDistribution rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/linked-data/cube#DataStructureDefinition> ;
+                                <http://purl.org/linked-data/cube#component> _:genid30 ,
+                                                                             _:genid31 ,
+                                                                             _:genid32 ,
+                                                                             _:genid33 ,
+                                                                             _:genid34 ,
+                                                                             _:genid35 ,
+                                                                             _:genid36 ;
+                                rdfs:comment "This data structure contains minimum hieararchy depth measurements."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                rdfs:label "Minimum hierarchy depth distribution"@en .
+
+_:genid30 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :implementationDimension .
+
+_:genid31 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :restrictionTypeDimension .
+
+_:genid32 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :detectorVersionDimension .
+
+_:genid33 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :executionTimeDimension .
+
+_:genid34 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :ontologyVersionDimension .
+
+_:genid35 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#measure> :minHierarchyDepth .
+
+_:genid36 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#attribute> <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minimumQualifiedCardinality
+:minimumQualifiedCardinality rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                             rdfs:comment ""@en ;
+                             rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                             rdfs:label "Minimum qualified cardinality restriction type"@en ;
+                             rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minimumQualifiedCardinalityDetectorOwl
+:minimumQualifiedCardinalityDetectorOwl rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                        rdfs:comment "A method or software component to detect owl:minQualifiedCardinality restrictions."@en ;
+                                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                        rdfs:label "owl:minQualifiedCardinality detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minimumQualifiedCardinalityLODStatsDetectorOwl-v1
+:minimumQualifiedCardinalityLODStatsDetectorOwl-v1 rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                   <http://purl.org/vocab/frbr/core#realizationOf> :minimumQualifiedCardinalityDetectorOwl ;
+                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                   rdfs:label "owl:minQualifiedCardinality detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minimumQualifiedCardinalityOwl
+:minimumQualifiedCardinalityOwl rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                <http://purl.org/vocab/frbr/core#realizationOf> :minimumQualifiedCardinality ;
+                                rdfs:comment "A minimum qualified cardinality restriction, expressed using the owl:minQualifiedCardinality property."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                rdfs:label "owl:minQualifiedCardinality restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minimumUnqualifiedCardinality
+:minimumUnqualifiedCardinality rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                               rdfs:comment "Minimum unqualified cardinality restriction type"@en ;
+                               rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                               rdfs:label ""@en ;
+                               rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minimumUnqualifiedCardinalityDetectorOwlMinCardinality
+:minimumUnqualifiedCardinalityDetectorOwlMinCardinality rdf:type owl:NamedIndividual ,
+                                                                 <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                        rdfs:comment "A method or software component to detect owl:minCardinality restrictions."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                        rdfs:label "owl:minCardinality detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minimumUnqualifiedCardinalityLODStatsDetectorOwlMinCardinality-v1
+:minimumUnqualifiedCardinalityLODStatsDetectorOwlMinCardinality-v1 rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                                   <http://purl.org/vocab/frbr/core#realizationOf> :minimumUnqualifiedCardinalityDetectorOwlMinCardinality ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                                   rdfs:label "owl:minCardinality detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#minimumUnqualifiedCardinalityOwlMinCardinality
+:minimumUnqualifiedCardinalityOwlMinCardinality rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                                rdfs:comment "A minimum unqualified cardinality restriction, expressed using the owl:minCardinality property."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                rdfs:label "owl:minCardinality restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#ontologyVersionDimension
+:ontologyVersionDimension rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#propertyDomains
+:propertyDomains rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                 rdfs:comment ""@en ;
+                 rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                 rdfs:label "Property domains restriction type"@en ;
+                 rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#propertyDomainsDetectorRdfsDomain
+:propertyDomainsDetectorRdfsDomain rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                   rdfs:comment "A method or software component to detect rdfs:domain restrictions."@en ;
+                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                   rdfs:label "rdfs:domain detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#propertyDomainsLODStatsDetectorRdfsDomain-v1
+:propertyDomainsLODStatsDetectorRdfsDomain-v1 rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                              <http://purl.org/vocab/frbr/core#realizationOf> :propertyDomainsDetectorRdfsDomain ;
+                                              rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                              rdfs:label "rdfs:domain detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#propertyDomainsRdfsDomain
+:propertyDomainsRdfsDomain rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                           <http://purl.org/vocab/frbr/core#realizationOf> :propertyDomains ;
+                           rdfs:comment "A property domains restriction, expressed using the rdfs:domain property."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                           rdfs:label "rdfs:domain restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#propertyRanges
+:propertyRanges rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                rdfs:comment ""@en ;
+                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                rdfs:label "Property ranges restriction type"@en ;
+                rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#propertyRangesDetetorRdfsRange
+:propertyRangesDetetorRdfsRange rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                rdfs:comment "A method or software component to detect rdfs:range restrictions."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                rdfs:label "rdfs:range detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#propertyRangesLODStatsDetectorRdfsRange-v1
+:propertyRangesLODStatsDetectorRdfsRange-v1 rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                            <http://purl.org/vocab/frbr/core#realizationOf> :propertyRangesDetetorRdfsRange ;
+                                            rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                            rdfs:label "rdfs:range detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#propertyRangesRdfsRange
+:propertyRangesRdfsRange rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                         <http://purl.org/vocab/frbr/core#realizationOf> :propertyRanges ;
+                         rdfs:comment "A property ranges restriction, expressed using the rdfs:range property."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                         rdfs:label "rdfs:range restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#restrictionTypeDimension
+:restrictionTypeDimension rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/linked-data/cube#DimensionProperty> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#restrictionTypeOccurrence
+:restrictionTypeOccurrence rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure> ;
+                           rdfs:comment "The occurrence of a restriction of a certain type."@en ;
+                           rdfs:label "Restriction type occurrence"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#restrictionTypesAmount
+:restrictionTypesAmount rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/linked-data/cube#DataStructureDefinition> ,
+                                 <http://www.w3.org/ns/prov#Entity> ;
+                        <http://purl.org/linked-data/cube#component> _:genid37 ,
+                                                                     _:genid38 ,
+                                                                     _:genid39 ,
+                                                                     _:genid40 ,
+                                                                     _:genid41 ,
+                                                                     _:genid42 ;
+                        rdfs:comment "This data structure contains the measurement of the amount of restriction types."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                        rdfs:label "Amount of restriction types"@en .
+
+_:genid37 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :restrictionTypeDimension .
+
+_:genid38 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :detectorVersionDimension .
+
+_:genid39 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :executionTimeDimension .
+
+_:genid40 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#dimension> :ontologyVersionDimension .
+
+_:genid41 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#measure> :occurrence .
+
+_:genid42 rdf:type <http://purl.org/linked-data/cube#ComponentSpecification> ;
+           <http://purl.org/linked-data/cube#attribute> <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#subsumption
+:subsumption rdf:type owl:NamedIndividual ,
+                      <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+             rdfs:comment ""@en ;
+             rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+             rdfs:label "Subsumption restriction type"@en ;
+             rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#subsumptionDetectorRdfsSubClassOf
+:subsumptionDetectorRdfsSubClassOf rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                   rdfs:comment "A method or software component to detect rdfs:subClassOf restrictions."@en ;
+                                   rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                   rdfs:label "rdfs:subClassOf detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#subsumptionLODStatsDetectorRdfsSubClassOf-v1
+:subsumptionLODStatsDetectorRdfsSubClassOf-v1 rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                              <http://purl.org/vocab/frbr/core#realizationOf> :subsumptionDetectorRdfsSubClassOf ;
+                                              rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                              rdfs:label "rdfs:subClassOf detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#subsumptionRdfsSubClassOf
+:subsumptionRdfsSubClassOf rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                           <http://purl.org/vocab/frbr/core#realizationOf> :subsumption ;
+                           rdfs:comment "A subsumption restriction, expressed using the rdfs:subClassOf property."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                           rdfs:label "rdfs:subClassOf restriction"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#universalQuantification
+:universalQuantification rdf:type owl:NamedIndividual ,
+                                  <https://w3id.org/lovcube/ns/lovcube#RestrictionType> ;
+                         rdfs:comment ""@en ;
+                         rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                         rdfs:label "Universal quantification restriction type"@en ;
+                         rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#universalQuantificationDetectorOwlAllValuesFrom
+:universalQuantificationDetectorOwlAllValuesFrom rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector> ;
+                                                 rdfs:comment "A method or software component to detect owl:allValuesFrom restrictions."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                 rdfs:label "owl:allValuesFrom detector"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#universalQuantificationLODStatsDetectorOwlAllValuesFrom-v1
+:universalQuantificationLODStatsDetectorOwlAllValuesFrom-v1 rdf:type owl:NamedIndividual ,
+                                                                     <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion> ;
+                                                            <http://purl.org/vocab/frbr/core#realizationOf> :universalQuantificationDetectorOwlAllValuesFrom ;
+                                                            rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                                            rdfs:label "owl:allValuesFrom detector (LODStats) v1"@en .
+
+
+###  https://w3id.org/lovcube/ns/relovstats#universalQuantificationOwlAllValuesFrom
+:universalQuantificationOwlAllValuesFrom rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression> ;
+                                         <http://purl.org/vocab/frbr/core#realizationOf> :univeralQuantification ;
+                                         rdfs:comment "An universal quantification restriction, expressed using the owl:allValuesFrom property."@en ;
+                                         rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                                         rdfs:label "owl:allValuesFrom restriction"@en .
+
+
+_:genid43 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/mbox> "mailto:Anastasia.dimou@UGent.be" ;
+          <http://xmlns.com/foaf/0.1/name> "Anastasia Dimou"@en .
+
+#################################################################
+#    Annotations
+#################################################################
+
+:detectorVersionDimension rdfs:comment "The specific detector used to collect the observation."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                           rdfs:label "Detector version dimension"@en .
+
+
+:executionTimeDimension rdfs:comment "The time at which the observation was made."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                        rdfs:label "Execution time dimension"@en .
+
+
+:ontologyVersionDimension rdfs:comment "The ontology version from which this observation was made."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                          rdfs:label "Ontology version dimension"@en .
+
+
+:restrictionTypeDimension rdfs:comment "The restriction type of this observation."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#> ;
+                          rdfs:label "Restriction type dimension"@en .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
